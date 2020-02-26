@@ -19,7 +19,7 @@ pipelines:
             image:
               custom:
                 name: docker.bintray.io/jfrog/pipelines-u18node
-                tag: "18"
+                tag: "10.18.0"
                 options: "-v /tmp/shared:/tmp/shared -v /tmp/myFolder:/tmp/myFolder"             
           inputResources:
             - name: mount_volumes_repo
@@ -39,7 +39,7 @@ pipelines:
             image:
               custom:
                 name: docker.bintray.io/jfrog/pipelines-u18node
-                tag: "18"
+                tag: "10.18.0"
                 options: "-v /tmp/shared:/tmp/shared -v /tmp/myFolder:/tmp/myFolder"                
           inputSteps:
             - name: step_1
