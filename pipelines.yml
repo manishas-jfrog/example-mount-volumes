@@ -26,9 +26,9 @@ pipelines:
         execution:
           onExecute:
             - cd /tmp/shared
-            - echo 'Hello World shared' > file.txt
+            - echo 'Hello World in shared' > file_shared.txt
             - cd /tmp/myFolder
-            - echo 'Hello World myFolder' > file.txt
+            - echo 'Hello World in myFolder' > file_myFolder.txt
             
       - name: step_2
         type: Bash
@@ -46,6 +46,6 @@ pipelines:
         execution:
           onExecute:
             - cd /tmp/shared
-            - cat file.txt "Hello world"
+            - cat file_shared.txt 
             - cd /tmp/myFolder
-            - cat file.txt
+            - cat file_myFolder.txt
