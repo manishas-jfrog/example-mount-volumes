@@ -1,5 +1,5 @@
 resources:
-  - name: mount-volumes-repo
+  - name: mount_volumes_repo
     type: GitRepo
     configuration:
       gitProvider: manishas_github   # replace with your integration  
@@ -22,7 +22,7 @@ pipelines:
                 tag: "18"
                 options: "-v /tmp/shared:/tmp/shared -v /tmp/myFolder:/tmp/myFolder"             
           inputResources:
-            - name: mount-volumes-repo
+            - name: mount_volumes_repo
         execution:
           onExecute:
             - cd /tmp/shared
